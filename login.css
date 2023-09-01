@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 方正小标宋;
+}
+
+:root {
+  --screen-height: 0;
+}
+
+html {
+  height: var(--screen-height);
+  background-image: linear-gradient(#e9d2eb, #bbd4ec);
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  width: 100vw;
+  /* overflow-x: scroll; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: "iconfont logo";
+  src: url("https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834");
+  src: url("https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834#iefix")
+      format("embedded-opentype"),
+    url("https://at.alicdn.com/t/font_985780_km7mi63cihi.woff?t=1545807318834")
+      format("woff"),
+    url("https://at.alicdn.com/t/font_985780_km7mi63cihi.ttf?t=1545807318834")
+      format("truetype"),
+    url("https://at.alicdn.com/t/font_985780_km7mi63cihi.svg?t=1545807318834#iconfont")
+      format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-stroke {
+  text-shadow: 0 -3px 2px white, /*上*/ 2px -2px 2px white,
+    /*右上*/ 3px 0 2px white, /*右*/ 2px 2px 2px white, /*右下*/ 0 3px 2px white,
+    /*下*/ -2px 2px 2px white, /*左下*/ -3px 0 2px white,
+    /*左*/ -2px -2px 2px white; /*左上*/
+}
+
+.yinying {
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+
+#app {
+  position: relative;
+}
+
+.picture {
+  display: flex;
+  filter: brightness(130%);
+  align-items: center;
+}
+
+#left {
+  width: 20vw;
+  max-width: 160px;
+}
+
+#right {
+  width: 20vw;
+  max-width: 160px;
+}
+
+#butter {
+  position: relative;
+  z-index: 999;
+  width: 10vw;
+  max-width: 100px;
+}
+
+#main {
+  width: 60vw;
+  max-width: 640px;
+  background-image: linear-gradient(#bbd4ec, #e9d2eb);
+  border-radius: 15px;
+  opacity: 0.8;
+  border: 3px outset white;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.anflex {
+  display: flex;
+  flex-direction: column;
+}
+
+#topbar {
+  height: 10vh;
+  max-height: 200px;
+}
+
+#note {
+  z-index: 99;
+}
+
+#board {
+  width: 20vw;
+  max-width: 180px;
+  margin-left: clamp(10px, 6vw, 2000px);
+  z-index: 99;
+}
+
+.title {
+  background-color: #e9d2eb;
+  color: #7cbaf8;
+  font-size: clamp(21px, 3.9vw, 42px);
+  font-weight: bold;
+  white-space: nowrap;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  border-bottom: 6px outset rgb(252, 188, 239);
+  transform: rotate(-4deg);
+  padding: 0.1em 0.8em;
+  height: clamp(28px, 5.2vw, 56px);
+  /* width: auto; */
+  margin-top: clamp(24px, 5vw, 48px);
+  margin-left: clamp(-30px, -5vw, -20px);
+}
+
+h1 {
+  /* margin-top: 15px; */
+  font-size: clamp(12px, 2vw + 7px, 25px);
+  text-align: center;
+  color: white;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #7cbaf8;
+  /* height: clamp(28px, 5.2vw, 56px); */
+}
+
+.entry {
+  margin-left: 10px;
+  border-style: none;
+  border-bottom: 2px dashed #bbd4ec;
+  background-color: #faf1fa;
+  border: 1px groove;
+  width: clamp(100px, 35vw, 350px);
+  height: 40px;
+}
+
+.entry:focus {
+  outline: none;
+  background-color: white;
+}
+
+.inputbar {
+  font-size: clamp(12px, 1.5vw + 4px, 17px);
+  font-weight: bold;
+  color: #7cbaf8;
+  text-transform: rotate(4deg);
+}
+
+.inputbox {
+  margin-top: 10px;
+  /* margin-right: clamp(30px, 10vw - 15px, 130px); */
+  text-align: center;
+  align-items: center;
+}
+
+#buttonbar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  width: 60px;
+  height: 32px;
+  border-width: 1.5px;
+  border-color: #e9d2eb;
+  border-radius: 5px;
+  background-color: #a7caec;
+  color: white;
+  font-weight: 550;
+}
+
+.footer {
+  height: 10vh;
+  max-height: 200px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+#fly {
+  text-align: center;
+  filter: brightness(150%);
+  position: relative;
+  z-index: 999;
+  /* float: left; */
+}

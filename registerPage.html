@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="font\iconfont.css" />
+  </head>
+
+  <body class="flex">
+    <div id="app" class="flex">
+      <!-- 左侧图片 -->
+      <div class="picture">
+        <img id="left" src="image-materials\flower-l.png" />
+      </div>
+
+      <!-- 中间核心区域 -->
+      <div id="main" class="yinying anflex">
+        <!-- 顶端 -->
+        <div class="flex" id="topbar"></div>
+        <!-- 固定部分 -->
+        <div class="flex">
+          <!-- 中心图标 -->
+          <div id="note">
+            <img class="flex" id="board" src="image-materials\board.png" />
+          </div>
+          <!-- 中心标题 -->
+          <div class="title text-stroke flex">To Do List</div>
+          <!-- 蝴蝶飞~ -->
+          <div class="iconfont" id="fly">
+            <img id="butter" src="image-materials\butterfly.png" />
+          </div>
+        </div>
+        <!-- 输入框 -->
+        <h1>LOG IN</h1>
+        <div class="inputbar text-stroke">
+          <div class="inputbox">
+            Username:
+            <input
+              type="text"
+              id="username"
+              placeholder="Create a username"
+              class="entry"
+            />
+          </div>
+          <div class="inputbox">
+            Password:
+            <input
+              type="password"
+              id="password"
+              placeholder="Create a password"
+              class="entry"
+            />
+          </div>
+        </div>
+        <!-- 按钮 -->
+        <div id="buttonbar">
+          <button id="regBtn">注册</button>
+          <button onclick="javascript:window.location.href='loginPage.html'">
+            去登录
+          </button>
+        </div>
+        <!-- 底部设计 -->
+        <div class="footer flex"></div>
+      </div>
+
+      <!-- 右侧图片 -->
+      <div class="picture">
+        <img id="right" src="image-materials\flower-r.png" />
+      </div>
+    </div>
+    <script src="register.js"></script>
+    <script src="md5.min.js"></script>
+  </body>
+</html>

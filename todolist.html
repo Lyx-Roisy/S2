@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todolist.css" />
+    <link rel="stylesheet" href="font\iconfont.css" />
+  </head>
+
+  <body style="display: flex" ontouchstart="">
+    <div id="app" style="display: flex">
+      <!-- 左侧图片 -->
+      <div class="picture">
+        <img id="left" src="image-materials\flower-l.png" />
+      </div>
+      <div style="position: relative">
+        <!-- 中间核心区域 -->
+        <div id="main" class="yinying anflex">
+          <!-- 计时相关部分 -->
+          <div class="flex" id="topbar">
+            <!-- 弹出部分 -->
+            <div class="popup flex">
+              <div><img id="clock" src="image-materials\clock2.png" /></div>
+              <div id="text">时间到啦！</div>
+            </div>
+            <!-- 计时器显示部分 -->
+            <div class="flex" id="timebox"></div>
+            <button id="abandonbutton" type="button">Abandon</button>
+          </div>
+          <!-- 固定部分-上 -->
+          <div class="flex">
+            <!-- 中心图标 -->
+            <div id="note">
+              <img class="flex" id="board" src="image-materials\board.png" />
+            </div>
+            <!-- 中心标题 -->
+            <div class="title text-stroke flex">To Do List</div>
+            <!-- 蝴蝶飞~ -->
+            <div class="iconfont" id="fly">
+              <img id="butter" src="image-materials\butterfly.png" />
+            </div>
+          </div>
+          <!-- 固定部分-中 -->
+          <div class="flex" id="wholeinput">
+            <form>
+              <!-- 输入框设置 -->
+              <input id="input1" placeholder="Add a new to-do" class="entry" />
+              <!-- 按钮设置 -->
+              <button id="submit" type="button">Submit</button>
+              <!-- 小标题 -->
+              <h1 id="titleone">Today I need to</h1>
+            </form>
+          </div>
+          <!-- 项目列表 -->
+          <ul class="todos anflex"></ul>
+          <!-- 已完成项目 -->
+          <h1 id="titletwo">I have done before</h1>
+          <ul class="dones anflex"></ul>
+          <!-- 底部设计 -->
+          <div class="footer flex">
+            <form class="footer flex">
+              <button id="clear" type="button">Clear</button>
+              <button
+                id="exit"
+                type="button"
+                onclick="javascript:window.location.href='loginPage.html'"
+              >
+                Exit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧图片 -->
+      <div class="picture">
+        <img id="right" src="image-materials\flower-r.png" />
+      </div>
+    </div>
+    <script src="todolist.js"></script>
+  </body>
+</html>

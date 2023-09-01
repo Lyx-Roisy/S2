@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login test</title>
+  </head>
+  <body>
+    <!-- http://localhost:8081/loginTest/ -->
+    <h1>登录</h1>
+    用户名: <input type="text" id="username" /><br />
+    密码: <input type="password" id="password" /><br />
+    <button id="loginBtn">登录</button>
+    <button onclick="javascript:window.location.href='registerPage.html'">
+      注册页面
+    </button>
+
+    <script src="md5.min.js"></script>
+    <script>
+      document.getElementById("loginBtn").onclick = function () {
+        var input_username = document.getElementById("username").value;
+        var input_password = document.getElementById("password").value;
+        // ajax提交用户名+密码到后台程序
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "loginRecv.php");
+        xhr.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
+        xhr.send(
+          "username=" + input_username + "&password=" + md5(input_password)
+        );
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            // 登录成功则跳转
+            var res = xhr.responseText;
+            if (res == "login success") {
+              window.location.href = "todolist.html";
+            } else {
+              alert("注册失败");
+            }
+          }
+        };
+      };
+    </script>
+  </body>
+</html>
